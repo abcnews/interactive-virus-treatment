@@ -1,0 +1,33 @@
+.root {
+  min-height: 100%;
+  // background-color: #E3F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-image: url(https://www.abc.net.au/res/sites/news-projects/interactive-scrollout/master/background-cover.jpg);
+  background-size: cover;
+}
+
+.svg-container {
+  width: 100%;
+
+  svg {
+    height: 100vh;
+
+    @media only screen and (min-width: 1023px) {
+      > g {
+        transform: translateX(-20vw);
+        
+      }
+    }
+  }
+}
+
+.preload {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}

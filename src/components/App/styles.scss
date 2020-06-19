@@ -1,0 +1,27 @@
+:global {
+  body {
+    background-color: #e0ffff !important;
+  }
+
+  // div[data-interactive-scrollout-root] > div > div.sgMpdhCf {
+  //   position: fixed;
+  // }
+
+  .Header-content h1 {
+    display: none;
+  }
+
+  div[data-component="OdysseyParallax_App"] {
+    background: #e0ffff;
+  }
+
+  .Header-media:after {
+    position: absolute;
+    // height: 8.25rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(224, 255, 255, 0),
+      rgba(224, 255, 255, 100)
+    ) !important;
+  }
+}
