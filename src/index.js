@@ -11,11 +11,18 @@ import { loadOdysseyScrollyteller } from "@abcnews/scrollyteller";
 const PROJECT_NAME = "interactive-scrollout";
 const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 
-const fragment = document.querySelector(".html-fragment");
-const embed = document.querySelector(".embed-fragment");
+// Make fragments go full width
+const phase1 = document.querySelectorAll(".html-fragment");
+  const phase1mobile = document.querySelectorAll(".embed-fragment");
+  const phase2 = document.querySelectorAll(".view-html-fragment-embedded");
 
-if (fragment) fragment.className = "inline-content html-fragment full u-full";
-if (embed) embed.className = "embed-fragment u-full";
+  const fragmentsLists = [phase1, phase1mobile, phase2];
+
+  for (const fragments of fragmentsLists) {
+    for (const fragment of fragments) {
+      fragment.classList.add("u-full");
+    }
+  }
 
 let scrollyData;
 
