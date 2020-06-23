@@ -8,32 +8,45 @@ import App from "./components/App";
 import jankdefer from "jankdefer";
 import { loadOdysseyScrollyteller } from "@abcnews/scrollyteller";
 
-const PROJECT_NAME = "interactive-scrollout";
+const PROJECT_NAME = "interactive-virus-treatment";
 const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 
-// Make fragments go full width
+// Make HTML fragments go full width
 const phase1 = document.querySelectorAll(".html-fragment");
-  const phase1mobile = document.querySelectorAll(".embed-fragment");
-  const phase2 = document.querySelectorAll(".view-html-fragment-embedded");
+const phase1mobile = document.querySelectorAll(".embed-fragment");
+const phase2 = document.querySelectorAll(".view-html-fragment-embedded");
 
-  const fragmentsLists = [phase1, phase1mobile, phase2];
+const fragmentsLists = [phase1, phase1mobile, phase2];
 
-  for (const fragments of fragmentsLists) {
-    for (const fragment of fragments) {
-      fragment.classList.add("u-full");
-    }
+for (const fragments of fragmentsLists) {
+  for (const fragment of fragments) {
+    fragment.classList.add("u-full");
   }
+}
 
 let scrollyData;
 
 function renderApp() {
-  if (!scrollyData) {
-    scrollyData = loadOdysseyScrollyteller("", "u-full", "mark");
-  }
+  console.log("Ready for init!");
 
-  render(<App scrollyData={scrollyData} />, root);
+  /*************** 
 
-  // IE11 being stubborn
+
+
+
+  // if (!scrollyData) {
+  //   scrollyData = loadOdysseyScrollyteller("", "u-full", "mark");
+  // }
+
+  // render(<App scrollyData={scrollyData} />, root);
+
+  // IE11 being stubborn and not displaying
+
+
+*******************/
+
+  // background color so let's override the background
+  // directly
   document.body.style.background = "#E0FFFF";
 }
 
@@ -55,6 +68,7 @@ jankdefer(init, {
   debug: false
 });
 
+// Set up hot reloading
 if (module.hot) {
   module.hot.accept("./components/App", () => {
     try {
