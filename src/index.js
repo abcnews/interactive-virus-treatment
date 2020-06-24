@@ -27,7 +27,7 @@ for (const fragments of fragmentsLists) {
 let scrollyData;
 
 function renderApp() {
-  console.log("Ready for init!");
+  console.log("Ready for init!!");
 
   /*************** 
 
