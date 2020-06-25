@@ -30,6 +30,8 @@
 		"react": "^16.13.1",
 		"react-device-detect": "^1.12.1",
 		"react-dom": "^16.13.1",
-		"react-inlinesvg": "^1.2.0"
+		"react-inlinesvg": "^1.2.0",
+		"regenerator-runtime": "^0.13.5",
+		"url-search-params-polyfill": "^8.1.0"
 	}
 }

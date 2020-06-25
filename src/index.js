@@ -1,6 +1,11 @@
 import "./keyshapejs.js";
-import "@babel/polyfill";
+// import "@babel/polyfill";
+import "regenerator-runtime/runtime.js";
 import "intersection-observer";
+import "url-search-params-polyfill";
+
+const params = new URLSearchParams(window.location.search);
+const proxyString = params.get("proxy");
 
 import React from "react";
 import { render } from "react-dom";
@@ -27,7 +32,20 @@ for (const fragments of fragmentsLists) {
 let scrollyData;
 
 function renderApp() {
-  console.log("Ready for init!!");
+  // Experiment with ?proxy=https://ws204914.aus.aunty.abc.net.au:8000/index.js
+  // to run a local copy of the bundle
+  if (proxyString && process.env.NODE_ENV === "production") {
+    console.log("Found proxy. Redirecting...")
+    function loadModule(url) {
+      const scriptTag = document.createElement("script");
+      scriptTag.setAttribute("src", url);
+      document.head.appendChild(scriptTag);
+    }
+
+    loadModule(proxyString);
+  } else {
+    console.log("Running!!!");
+  }
 
   /*************** 
 
