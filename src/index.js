@@ -12,9 +12,9 @@ import { render } from "react-dom";
 import App from "./components/App";
 import jankdefer from "jankdefer";
 import { loadOdysseyScrollyteller } from "@abcnews/scrollyteller";
+import { hashify } from "./hashify";
 
 const PROJECT_NAME = "interactive-virus-treatment";
-const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 
 // Make HTML fragments go full width
 const phase1 = document.querySelectorAll(".html-fragment");
@@ -35,7 +35,7 @@ function renderApp() {
   // Experiment with ?proxy=https://ws204914.aus.aunty.abc.net.au:8000/index.js
   // to run a local copy of the bundle
   if (proxyString && process.env.NODE_ENV === "production") {
-    console.log("Found proxy. Redirecting...")
+    console.log("Found proxy. Redirecting...");
     function loadModule(url) {
       const scriptTag = document.createElement("script");
       scriptTag.setAttribute("src", url);
@@ -45,24 +45,18 @@ function renderApp() {
     loadModule(proxyString);
   } else {
     console.log("Running!!!");
+    hashify({ hashList: ["attach"], defaultClass: "u-full" });
+
+    const root = document.querySelector(`.attach`);
+
+    if (!scrollyData) {
+      scrollyData = loadOdysseyScrollyteller("", "u-full", "mark");
+    }
+
+    render(<App scrollyData={scrollyData} />, root);
   }
 
-  /*************** 
-
-
-
-
-  // if (!scrollyData) {
-  //   scrollyData = loadOdysseyScrollyteller("", "u-full", "mark");
-  // }
-
-  // render(<App scrollyData={scrollyData} />, root);
-
   // IE11 being stubborn and not displaying
-
-
-*******************/
-
   // background color so let's override the background
   // directly
   document.body.style.background = "#E0FFFF";
