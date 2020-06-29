@@ -28,6 +28,8 @@ const PROJECT_NAME = "interactive-virus-treatment";
 let scrollyData;
 
 function renderApp() {
+
+  console.log("hello")
   hashify({ hashList: ["attach"], defaultClass: "u-full" });
 
   const root = document.querySelector(`.attach`);
@@ -36,7 +38,7 @@ function renderApp() {
     scrollyData = loadOdysseyScrollyteller("", "u-full", "mark");
   }
 
-  // render(<App scrollyData={scrollyData} />, root);
+  render(<App scrollyData={scrollyData} />, root);
 
   // IE11 being stubborn and not displaying
   // background color so let's override the background
