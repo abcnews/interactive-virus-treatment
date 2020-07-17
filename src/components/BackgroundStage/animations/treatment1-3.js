@@ -4,19 +4,16 @@ const animate = function(ks) {
       "#Coronavirus",
       [
         {
-          p: "rotate",
-          t: [1500, 2500, 3500],
-          v: [0, -2, 0],
-          e: [[1, 0.4, 0, 0.6, 1], [1, 0.4, 0, 0.6, 1], [0]]
-        }
-      ],
-      "#Highlights",
-      [
+          p: "opacity",
+          t: [1500, 2000],
+          v: [1, 0.3],
+          e: [[1, 0, 0, 0.6, 1], [0]]
+        },
         {
-          p: "rotate",
-          t: [1500, 2500, 3500],
-          v: [0, -2, 0],
-          e: [[1, 0.4, 0, 0.6, 1], [1, 0.4, 0, 0.6, 1], [0]]
+          p: "filter",
+          t: [1500, 2000],
+          v: ["saturate(1)", "saturate(0)"],
+          e: [[0], [0]]
         }
       ],
       "#Edge",
@@ -101,9 +98,24 @@ const animate = function(ks) {
           e: [[1, 0, 0, 0.6, 1], [0]]
         }
       ],
-      { autoremove: false, markers: { LoopStart: 1500 } }
+      "#Spike-protein-text",
+      [{ p: "opacity", t: [2250, 2750], v: [0, 1], e: [[0], [0]] }],
+      "#Spike-protein-label-path",
+      [
+        { p: "opacity", t: [2000, 2042], v: [0, 1], e: [[0], [0]] },
+        {
+          p: "d",
+          t: [2000, 2500],
+          v: [
+            "path('M-72.7,94.5L-72.7,94.5')",
+            "path('M-41.4,60.2L-72.7,94.5')"
+          ],
+          e: [[1, 0, 0, 0.6, 1], [0]]
+        }
+      ],
+      { autoremove: false }
     )
-    .range(0, 3500);
+    .range(0, 2750);
   if (
     document.location.search
       .substr(1)
