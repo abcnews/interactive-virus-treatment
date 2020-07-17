@@ -20,7 +20,7 @@ let nextAnimation;
 
 export default props => {
   const [preload, setPreload] = useState(true);
-  // const [windowWidth, windowHeight] = useWindowSize();
+
   const [view, setView] = useState("default");
   const [animationName, setAnimationName] = useState();
 
@@ -171,8 +171,6 @@ export default props => {
                   src={sequences[view][animationName].svg}
                   onLoad={svgLoaded}
                   preProcessor={preProcessSvg}
-                  // uniquifyIDs={true}
-                  // uniqueHash={"unique"}
                   onError={error => {
                     console.error(error);
                   }}
