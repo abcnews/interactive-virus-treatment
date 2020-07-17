@@ -8,7 +8,7 @@ import { render } from "react-dom";
 import App from "./components/App";
 import jankdefer from "jankdefer";
 import { loadOdysseyScrollyteller } from "@abcnews/scrollyteller";
-import { hashify } from "./hashify";
+import { hashify } from "spanify";
 
 const PROJECT_NAME = "interactive-virus-treatment";
 
@@ -43,7 +43,7 @@ function renderApp() {
   // IE11 being stubborn and not displaying
   // background color so let's override the background
   // directly
-  document.body.style.background = "#E0FFFF";
+  document.body.style.background = "#FDE9F1";
 }
 
 function init() {
