@@ -84,7 +84,47 @@ const sequences = {
       svg: require("./sequence/treatment3-2.svg"),
       animation: require("./animations/treatment3-2"),
       index: 17
-    }
+    },
+    eighteen: {
+      svg: require("./sequence/treatment4-1.svg"),
+      animation: require("./animations/treatment4-1"),
+      index: 18
+    },
+    nineteen: {
+      svg: require("./sequence/treatment4-2.svg"),
+      animation: require("./animations/treatment4-2"),
+      index: 19
+    },
+    twenty: {
+      svg: require("./sequence/treatment4-3.svg"),
+      animation: require("./animations/treatment4-3"),
+      index: 20
+    },
+    twentyone: {
+      svg: require("./sequence/treatment4-4.svg"),
+      animation: require("./animations/treatment4-4"),
+      index: 21
+    },
+    twentytwo: {
+      svg: require("./sequence/treatment4-5.svg"),
+      animation: require("./animations/treatment4-5"),
+      index: 22
+    },
+    twentythree: {
+      svg: require("./sequence/treatment4-6.svg"),
+      animation: require("./animations/treatment4-6"),
+      index: 23
+    },
+    twentyfour: {
+      svg: require("./sequence/treatment5-1.svg"),
+      animation: require("./animations/treatment5-1"),
+      index: 24
+    },
+    twentyfive: {
+      svg: require("./sequence/treatment5-1.svg"),
+      animation: require("./animations/treatment5-1"),
+      index: 25
+    },
   }
 };
 
