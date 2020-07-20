@@ -1,4 +1,4 @@
-var fs = require("fs");
+const fs = require("fs");
 
 const testFolder = "./sequence";
 const regex = /ks\.animate.*ks\.globalPause\(\)/gs;
@@ -25,4 +25,3 @@ fs.readdirSync(testFolder).forEach(file => {
   // Write the file
   fs.writeFileSync(`./animations/${javaScriptFileName}js`, insertedCode);
 });
-
