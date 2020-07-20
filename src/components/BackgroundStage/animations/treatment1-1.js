@@ -27,7 +27,6 @@ const animate = ks => {
       .indexOf("global=paused") >= 0
   )
     ks.globalPause();
-
   return tl;
 };
 
