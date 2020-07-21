@@ -121,8 +121,8 @@ const sequences = {
       index: 24
     },
     twentyfive: {
-      svg: require("./sequence/treatment5-6.svg"),
-      animation: require("./animations/treatment5-6"),
+      svg: require("./sequence/treatment5-2.svg"),
+      animation: require("./animations/treatment5-2"),
       index: 25
     },
   }

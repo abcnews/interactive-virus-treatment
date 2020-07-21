@@ -31,5 +31,6 @@ const animate = ks => { const tl = ks.animate("#Body-back",[{p:'mpath',t:[1250,2
 "#purple-stroke",[{p:'opacity',t:[3875,3917],v:[1,0],e:[[0],[0]]}],
 "#ACE2-Receptors",[{p:'opacity',t:[3875,3917],v:[1,0],e:[[0],[0]]}],
 "#ACE2-front-3",[{p:'mpath',t:[1250,1708],v:['0%','100%'],e:[[1,.4,0,1,1],[0]],mp:"M26.5,-39.6L1.5,-2.2"},{p:'opacity',t:[1250,1708],v:[1,0],e:[[0],[0]]}],
+"#_a1",[{p:'opacity',t:[5708,6500],v:[0,1],e:[[0],[0]]}],
 {autoremove:false,markers:{"LoopStart":6500}}).range(0,8500);
 if(document.location.search.substr(1).split('&').indexOf('global=paused')>=0)ks.globalPause() ; return tl; }; module.exports = animate;
