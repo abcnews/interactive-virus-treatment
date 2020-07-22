@@ -43,7 +43,7 @@ function renderApp() {
   // IE11 being stubborn and not displaying
   // background color so let's override the background
   // directly
-  document.body.style.background = "#FDE9F1";
+  document.body.style.background = "#F0DDE3";
 }
 
 function init() {
