@@ -60,71 +60,96 @@ const sequences = {
       animation: require("./animations/treatment2-1"),
       index: 12
     },
-    thirteen: {
+    twoone: {
+      svg: require("./sequence/treatment2-1.svg"),
+      animation: require("./animations/treatment2-1"),
+      index: 12
+    },
+    twotwo: {
       svg: require("./sequence/treatment2-2.svg"),
       animation: require("./animations/treatment2-2"),
       index: 13
     },
-    fourteen: {
+    twothree: {
       svg: require("./sequence/treatment2-3.svg"),
       animation: require("./animations/treatment2-3"),
       index: 14
     },
-    fifteen: {
+    twofour: {
       svg: require("./sequence/treatment2-4.svg"),
       animation: require("./animations/treatment2-4"),
       index: 15
     },
-    sixteen: {
+    twofive: {
+      svg: require("./sequence/treatment2-5.svg"),
+      animation: require("./animations/treatment2-5"),
+      index: 16
+    },
+    threeone: {
       svg: require("./sequence/treatment3-1.svg"),
       animation: require("./animations/treatment3-1"),
       index: 16
     },
-    seventeen: {
+    threetwo: {
       svg: require("./sequence/treatment3-2.svg"),
       animation: require("./animations/treatment3-2"),
       index: 17
     },
-    eighteen: {
+    threethree: {
+      svg: require("./sequence/treatment3-3.svg"),
+      animation: require("./animations/treatment3-3"),
+      index: 17
+    },
+    fourone: {
       svg: require("./sequence/treatment4-1.svg"),
       animation: require("./animations/treatment4-1"),
       index: 18
     },
-    nineteen: {
+    fourtwo: {
       svg: require("./sequence/treatment4-2.svg"),
       animation: require("./animations/treatment4-2"),
       index: 19
     },
-    twenty: {
+    fourthree: {
       svg: require("./sequence/treatment4-3.svg"),
       animation: require("./animations/treatment4-3"),
       index: 20
     },
-    twentyone: {
+    fourfour: {
       svg: require("./sequence/treatment4-4.svg"),
       animation: require("./animations/treatment4-4"),
       index: 21
     },
-    twentytwo: {
+    fourfive: {
       svg: require("./sequence/treatment4-5.svg"),
       animation: require("./animations/treatment4-5"),
       index: 22
     },
-    twentythree: {
+    foursix: {
       svg: require("./sequence/treatment4-6.svg"),
       animation: require("./animations/treatment4-6"),
       index: 23
     },
-    twentyfour: {
+    fourseven: {
+      svg: require("./sequence/treatment4-7.svg"),
+      animation: require("./animations/treatment4-7"),
+      index: 24
+    },
+    fiveone: {
       svg: require("./sequence/treatment5-1.svg"),
       animation: require("./animations/treatment5-1"),
       index: 24
     },
-    twentyfive: {
+    fivetwo: {
       svg: require("./sequence/treatment5-2.svg"),
       animation: require("./animations/treatment5-2"),
       index: 25
     },
+    fivethree: {
+      svg: require("./sequence/treatment5-3.svg"),
+      animation: require("./animations/treatment5-3"),
+      index: 25
+    }
   }
 };
 
