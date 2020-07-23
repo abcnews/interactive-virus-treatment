@@ -86,10 +86,15 @@ export default props => {
       topGroupTag.substring(position + 3);
 
     // If we are on Desktop tweak font size
-    const output =
+    const fontSize =
       window.innerWidth > 900
         ? lastGroupTag.replace(/font-size="18"/g, 'font-size="15"')
         : lastGroupTag;
+
+    const output = fontSize.replace(
+      /xlink:href="exports/g,
+      'xlink:href="https://www.abc.net.au/res/sites/news-projects/interactive-virus-treatment/master/exports'
+    );
 
     return output;
   };
