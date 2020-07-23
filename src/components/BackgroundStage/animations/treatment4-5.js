@@ -19,6 +19,6 @@ const animate = ks => { const tl = ks.animate("#All",[{p:'mpath',t:[0,2000],v:['
 "#_a15",[{p:'mpath',t:[1500,2000,3000,4000],v:['0%','73.6%','86.8%','100%'],e:[[1,.2,.6,.4,1],[1,.4,0,.6,1],[1,.4,0,.6,1],[0]],mp:"M24,8.2L24,-21.8L19,-23.8L24,-21.8"}],
 "#_a16",[{p:'opacity',t:[0,500],v:[1,0],e:[[0],[0]]}],
 "#_a17",[{p:'opacity',t:[1000,1708],v:[0,1],e:[[0],[0]]}],
-"#Protease",[{p:'mpath',t:[0,1000],v:['0%','100%'],e:[[1,0,0,.6,1],[0]],mp:"M364.6,24.8L225.7,359.7"},{p:'rotate',t:[0,2000,4000],v:[-387,-27,333],e:[[0],[0],[0]]},{p:'opacity',t:[0,458],v:[0,1],e:[[0],[0]]}],
+"#Protease",[{p:'mpath',t:[0,1000],v:['0%','100%'],e:[[1,0,0,.6,1],[0]],mp:"M364.6,24.8L225.7,309.7"},{p:'rotate',t:[0,2000,4000],v:[-387,-27,333],e:[[0],[0],[0]]},{p:'opacity',t:[0,458],v:[0,1],e:[[0],[0]]}],
 {autoremove:false,markers:{"LoopStart":2000}}).range(0,4000);
 if(document.location.search.substr(1).split('&').indexOf('global=paused')>=0)ks.globalPause() ; return tl; }; module.exports = animate;

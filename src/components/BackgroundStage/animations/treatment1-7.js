@@ -25,6 +25,6 @@ const animate = ks => { const tl = ks.animate("#All",[{p:'mpath',t:[0,1500],v:['
 "#_a19",[{p:'mpath',t:[0,2000],v:['0%','100%'],e:[[1,.4,0,.6,1],[0]],mp:"M154.3,557.4L170.6,580.6"},{p:'opacity',t:[1000,1500],v:[1,0],e:[[0],[0]]}],
 "#_a20",[{p:'mpath',t:[0,2000],v:['0%','100%'],e:[[1,.4,0,.6,1],[0]],mp:"M747.8,437.2L776,446.7"},{p:'opacity',t:[1000,1500],v:[1,0],e:[[0],[0]]}],
 "#_a21",[{p:'mpath',t:[0,2000],v:['0%','100%'],e:[[1,.4,0,.6,1],[0]],mp:"M290.6,156.1L307.9,187.6"},{p:'opacity',t:[1000,1500],v:[1,0],e:[[0],[0]]}],
-"#Interleukin-6-2",[{p:'opacity',t:[1500,2500],v:[0,1],e:[[0],[0]]}],
+"#Interleukin-6-2",[{p:'opacity',t:[1000,2000],v:[0,1],e:[[0],[0]]}],
 {autoremove:false,markers:{"LoopStart":2000}}).range(0,4000);
 if(document.location.search.substr(1).split('&').indexOf('global=paused')>=0)ks.globalPause() ; return tl; }; module.exports = animate;

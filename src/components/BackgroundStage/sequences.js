@@ -56,8 +56,8 @@ const sequences = {
       index: 11
     },
     twelve: {
-      svg: require("./sequence/treatment2-1.svg"),
-      animation: require("./animations/treatment2-1"),
+      svg: require("./sequence/treatment1-12.svg"),
+      animation: require("./animations/treatment1-12"),
       index: 12
     },
     twoone: {

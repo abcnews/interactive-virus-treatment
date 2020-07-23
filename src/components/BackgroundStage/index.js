@@ -242,67 +242,87 @@ export default props => {
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["thirteen"].svg}
+            src={sequences[view]["twoone"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["fourteen"].svg}
+            src={sequences[view]["twotwo"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["fifteen"].svg}
+            src={sequences[view]["twothree"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["sixteen"].svg}
+            src={sequences[view]["twofour"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["seventeen"].svg}
+            src={sequences[view]["twofive"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["eighteen"].svg}
+            src={sequences[view]["threeone"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["nineteen"].svg}
+            src={sequences[view]["threetwo"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["twenty"].svg}
+            src={sequences[view]["fourone"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["twentyone"].svg}
+            src={sequences[view]["fourtwo"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["twentytwo"].svg}
+            src={sequences[view]["fourthree"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["twentythree"].svg}
+            src={sequences[view]["fourfour"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["twentyfour"].svg}
+            src={sequences[view]["fourfive"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
           <SVG
-            src={sequences[view]["twentyfive"].svg}
+            src={sequences[view]["foursix"].svg}
+            uniquifyIDs={true}
+            preProcessor={preProcessSvg}
+          />
+          <SVG
+            src={sequences[view]["fourseven"].svg}
+            uniquifyIDs={true}
+            preProcessor={preProcessSvg}
+          />
+          <SVG
+            src={sequences[view]["fiveone"].svg}
+            uniquifyIDs={true}
+            preProcessor={preProcessSvg}
+          />
+          <SVG
+            src={sequences[view]["fivetwo"].svg}
+            uniquifyIDs={true}
+            preProcessor={preProcessSvg}
+          />
+          <SVG
+            src={sequences[view]["fivethree"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
           />
