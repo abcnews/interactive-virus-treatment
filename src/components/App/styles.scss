@@ -1,18 +1,18 @@
 :global {
   body {
-    background-color: #F0DDE3 !important;
+    background-color: #f0dde3 !important;
   }
 
   // div[data-interactive-scrollout-root] > div > div.sgMpdhCf {
   //   position: fixed;
   // }
 
-  // .Header-content h1 {
-  //   display: none;
-  // }
+  .Header-content h1 {
+    display: none;
+  }
 
   div[data-component="OdysseyParallax_App"] {
-    background: #F0DDE3;
+    background: #f0dde3;
   }
 
   .Header-media:after {
@@ -20,8 +20,8 @@
     // height: 8.25rem;
     background-image: linear-gradient(
       to bottom,
-      rgba(224, 255, 255, 0),
-      rgba(224, 255, 255, 100)
+      rgba(240, 221, 227, 0),
+      rgba(240, 221, 227, 100)
     ) !important;
   }
 }
