@@ -62,6 +62,12 @@ export default props => {
       "</dummy>"
     );
 
+    // Fix for no <defs> export from Ben
+    const noDefsFix = closingScriptStripped.replace(
+      `white-space: pre;"><g transform="translate(922.4,299.6)`,
+      `white-space: pre;"><defs></defs><g transform="translate(922.4,299.6)`
+    );
+
     // Put everything inside another g tag
     // so we can more easily position it
     let topGroupTag;
@@ -70,12 +76,12 @@ export default props => {
     const isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
 
     if (isIE11 && window.innerWidth > 1023) {
-      topGroupTag = closingScriptStripped.replace(
+      topGroupTag = noDefsFix.replace(
         "</defs><g",
         `</defs><g transform="translate(-${window.innerWidth * 0.2},0)"><g`
       );
     } else {
-      topGroupTag = closingScriptStripped.replace("</defs><g", `</defs><g><g`);
+      topGroupTag = noDefsFix.replace("</defs><g", `</defs><g><g`);
     }
 
     const position = topGroupTag.lastIndexOf("</g>");
