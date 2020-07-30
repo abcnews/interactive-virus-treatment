@@ -92,7 +92,7 @@ export default props => {
         : lastGroupTag;
 
     const output = fontSize.replace(
-      /xlink:href="exports/g,
+      /xlink:href="https://www.abc.net.au/res/sites/news-projects/interactive-virus-treatment/master/exports/g,
       'xlink:href="https://www.abc.net.au/res/sites/news-projects/interactive-virus-treatment/master/exports'
     );
 
