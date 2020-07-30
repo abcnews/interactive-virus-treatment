@@ -288,6 +288,11 @@ export default props => {
             preProcessor={preProcessSvg}
           />
           <SVG
+            src={sequences[view]["threethree"].svg}
+            uniquifyIDs={true}
+            preProcessor={preProcessSvg}
+          />
+          <SVG
             src={sequences[view]["fourone"].svg}
             uniquifyIDs={true}
             preProcessor={preProcessSvg}
