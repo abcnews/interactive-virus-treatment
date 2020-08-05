@@ -28,8 +28,6 @@ const PROJECT_NAME = "interactive-virus-treatment";
 let scrollyData;
 
 function renderApp() {
-
-  console.log("hello")
   hashify({ hashList: ["attach"], defaultClass: "u-full" });
 
   const root = document.querySelector(`.attach`);

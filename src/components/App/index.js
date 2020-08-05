@@ -14,7 +14,6 @@ export default props => {
   const [showStage, setShowStage] = useState(false);
 
   const processMarker = (event, test) => {
-    console.log(event)
     setStoryState({ name: event.key, event: event });
   };
 

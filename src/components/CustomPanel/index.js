@@ -92,7 +92,9 @@ export default props => {
       // Append CoreMedia nodes
       props.nodes.forEach(node => {
         // Make sure images fit inside the panels
-        if (
+        if (node.tagName === "DIV") {
+          // Don't do anyting to divs (teasers...)
+        } else if (
           node.className.indexOf("ImageEmbed") > -1 ||
           node.tagName === "IMG"
         ) {
@@ -119,6 +121,8 @@ export default props => {
             img.removeAttribute("height");
           });
         }
+
+        // Append the node
         base.current.appendChild(node);
       });
     }

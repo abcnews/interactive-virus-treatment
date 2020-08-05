@@ -15,6 +15,5 @@ const proxyString = params.get("proxy");
 
     loadModule(proxyString);
   } else {
-    console.log("..........");
     require("./main.js")
   }
