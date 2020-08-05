@@ -436,11 +436,6 @@ $fade-height: 50vh;
     margin-bottom: 0 !important;
   }
 
-  .u-pull-right {
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
-  }
-
   aside.StoryTeaserEmbed {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -452,19 +447,10 @@ $fade-height: 50vh;
 
     h2 {
       color: #0073a8;
-      margin: 0 0 0.75rem;
-    }
 
-    p {
-      font-size: 0.9375rem;
-    }
-  }
-
-  .StoryTeaserEmbed {
-    h2 {
       text-align: left;
       padding: 0;
-      margin-bottom: 0.75rem;
+      margin: 0 0 0.75rem;
 
       &::before {
         content: none;
@@ -472,9 +458,35 @@ $fade-height: 50vh;
     }
 
     p {
+      font-size: 0.9375rem;
       width: unset;
       padding: 0 !important;
       line-height: 1.3334;
+    }
+  }
+
+  div.u-pull-right {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+
+    .StoryTeaserEmbed {
+      max-width: unset;
+
+      h2 {
+        text-align: left;
+        padding: 0;
+        margin-bottom: 0.75rem;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      p {
+        width: unset;
+        padding: 0 !important;
+        line-height: 1.3334;
+      }
     }
   }
 }
