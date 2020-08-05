@@ -92,8 +92,8 @@ export default props => {
       // Append CoreMedia nodes
       props.nodes.forEach(node => {
         // Make sure images fit inside the panels
-        if (node.tagName === "DIV") {
-          // Don't do anyting to divs (teasers...)
+        if (node.tagName === "DIV" || node.tagName === "ASIDE") {
+          // Don't do anyting to divs or ASIDE (teasers...)
         } else if (
           node.className.indexOf("ImageEmbed") > -1 ||
           node.tagName === "IMG"

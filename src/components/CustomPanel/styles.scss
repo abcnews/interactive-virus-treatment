@@ -279,12 +279,14 @@ $fade-height: 50vh;
     background-repeat: no-repeat;
   }
 
+  // Mobile styles
   @media only screen and (max-width: 43.75rem) {
     .panel {
       width: 100% !important;
 
       p {
         width: 100%;
+        margin-bottom: 1.5rem;
       }
 
       ul {
@@ -311,12 +313,14 @@ $fade-height: 50vh;
     }
   }
 
+  // Tablet styles
   @media (min-width: 43.75rem) and (max-width: 61.1875rem) {
     .panel {
       width: 83.33333%;
 
       p {
         width: 100%;
+        margin-bottom: 2rem;
       }
 
       ul {
@@ -435,6 +439,20 @@ $fade-height: 50vh;
   .u-pull-right {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  aside.StoryTeaserEmbed {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      color: #0073a8;
+    }
+
+    p {
+      font-size: 0.9375rem;
+    }
   }
 
   .StoryTeaserEmbed {
