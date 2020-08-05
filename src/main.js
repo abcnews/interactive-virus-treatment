@@ -1,5 +1,5 @@
 import "./keyshapejs.js";
-// import "@babel/polyfill";
+import "@babel/polyfill";
 import "regenerator-runtime/runtime.js";
 import "intersection-observer";
 
