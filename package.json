@@ -32,7 +32,7 @@
   "react-device-detect": "^1.12.1",
   "react-dom": "^16.13.1",
   "react-inlinesvg": "^1.2.0",
-  "regenerator-runtime": "^0.13.5",
+  "regenerator-runtime": "^0.13.8",
   "spanify": "^1.4.0",
   "url-search-params-polyfill": "^8.1.0"
  }
