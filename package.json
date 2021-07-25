@@ -23,7 +23,7 @@
   "@abcnews/scrollyteller": "^1.4.4",
   "@babel/polyfill": "^7.10.1",
   "@react-hook/window-size": "^2.0.5",
-  "@types/node": "^14.0.1",
+  "@types/node": "^14.17.3",
   "d3-scale": "^4.0.0",
   "intersection-observer": "^0.10.0",
   "jankdefer": "^1.0.2",
