@@ -1,35 +1,35 @@
 {
-  "name": "interactive-virus-treatment",
-  "version": "1.0.3",
-  "description": "An ABC News Story Lab article about coronavirus and vaccines",
-  "license": "MIT",
-  "private": true,
-  "contributors": [
-    "Joshua Byrd <phocks@gmail.com>",
-    "Colin Gourlay <gourlay.colin@abc.net.au>"
-  ],
-  "aunty": {
-    "type": "react"
-  },
-  "scripts": {
-    "start": "aunty serve",
-    "test": "snyk test && aunty test"
-  },
-  "devDependencies": {
-    "@abcnews/aunty": "^12.2.0",
-    "@types/node": "^14.17.3",
-    "react-test-renderer": "^16.13.1",
-    "snyk": "^1.576.0"
-  },
-  "dependencies": {
-    "@abcnews/env-utils": "^3.0.0",
-    "@abcnews/mount-utils": "^2.0.0",
-    "@abcnews/scrollyteller": "^4.1.1",
-    "d3-scale": "^4.0.0",
-    "lodash": "^4.17.21",
-    "react": "^16.13.1",
-    "react-device-detect": "^1.12.1",
-    "react-dom": "^16.13.1",
-    "react-inlinesvg": "^1.2.0"
-  }
+	"name": "interactive-virus-treatment",
+	"version": "2.0.0",
+	"description": "An ABC News Story Lab article about coronavirus and vaccines",
+	"license": "MIT",
+	"private": true,
+	"contributors": [
+		"Joshua Byrd <phocks@gmail.com>",
+		"Colin Gourlay <gourlay.colin@abc.net.au>"
+	],
+	"aunty": {
+		"type": "react"
+	},
+	"scripts": {
+		"start": "aunty serve",
+		"test": "snyk test && aunty test"
+	},
+	"devDependencies": {
+		"@abcnews/aunty": "^12.2.0",
+		"@types/node": "^14.17.3",
+		"react-test-renderer": "^16.13.1",
+		"snyk": "^1.576.0"
+	},
+	"dependencies": {
+		"@abcnews/env-utils": "^3.0.0",
+		"@abcnews/mount-utils": "^2.0.0",
+		"@abcnews/scrollyteller": "^4.1.1",
+		"d3-scale": "^4.0.0",
+		"lodash": "^4.17.21",
+		"react": "^16.13.1",
+		"react-device-detect": "^1.12.1",
+		"react-dom": "^16.13.1",
+		"react-inlinesvg": "^1.2.0"
+	}
 }
