@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-import styles from "./styles.scss";
+import styles from './styles.scss';
 
 // Controls how far off the screen the top and bottom
 // panels are before the background stage is hidden
@@ -12,13 +12,9 @@ const FADE_THRESHOLD = 400;
 // How far to remain invisible
 const FADE_OFFSET = -10;
 
-const d3 = { ...require("d3-scale") };
+const d3 = { ...require('d3-scale') };
 
-const opacityScale = d3
-  .scaleLinear()
-  .domain([FADE_OFFSET, FADE_THRESHOLD])
-  .range([0, 1])
-  .clamp(true);
+const opacityScale = d3.scaleLinear().domain([FADE_OFFSET, FADE_THRESHOLD]).range([0, 1]).clamp(true);
 
 export default props => {
   const base = useRef();
@@ -51,20 +47,20 @@ export default props => {
     // }
 
     // Only run on Scrollout panels
-    if (!props.config.scrollout) return;
+    if (!props.data.scrollout) return;
 
     // Get top and bottom positions of panel
     const top = base.current.getBoundingClientRect().top;
     const bottom = base.current.getBoundingClientRect().bottom;
 
     // If panel is off screen just fade it and do nothing else
-    if (bottom < 0 || (top > windowHeight && !props.config.scrolloutbottom)) {
+    if (bottom < 0 || (top > windowHeight && !props.data.scrolloutbottom)) {
       setOpacity(0.1);
       return;
     }
 
     // Fade in and out top if needed otherwise just make visible
-    if (top < windowHeight && top > 0 && !props.config.scrolloutbottom) {
+    if (top < windowHeight && top > 0 && !props.data.scrolloutbottom) {
       const pixelsAboveFold = windowHeight - top;
       setOpacity(opacityScale(pixelsAboveFold));
     } else {
@@ -86,39 +82,30 @@ export default props => {
     // Tell scrollyteller that this is a panel
     props.reference(base.current);
 
-    if (!props.config.swap) {
+    if (!props.data.swap) {
       const isMobile = window.innerWidth < 440;
 
       // Append CoreMedia nodes
       props.nodes.forEach(node => {
         // Make sure images fit inside the panels
-        if (node.tagName === "DIV" || node.tagName === "ASIDE") {
+        if (node.tagName === 'DIV' || node.tagName === 'ASIDE') {
           // Don't do anyting to divs or ASIDE (teasers...)
-        } else if (
-          node.className.indexOf("ImageEmbed") > -1 ||
-          node.tagName === "IMG"
-        ) {
-          node.style.setProperty("display", "block");
-          node.style.setProperty("margin", "auto");
-          node.style.setProperty(
-            "width",
-            isMobile ? "83.333333%" : "66.66667%"
-          );
-          node.style.setProperty("padding-left", "0.875rem");
-          node.style.setProperty("padding-right", "0.875rem");
-          if (node.hasAttribute("height")) {
-            node.removeAttribute("height");
+        } else if (node.className.indexOf('ImageEmbed') > -1 || node.tagName === 'IMG') {
+          node.style.setProperty('display', 'block');
+          node.style.setProperty('margin', 'auto');
+          node.style.setProperty('width', isMobile ? '83.333333%' : '66.66667%');
+          node.style.setProperty('padding-left', '0.875rem');
+          node.style.setProperty('padding-right', '0.875rem');
+          if (node.hasAttribute('height')) {
+            node.removeAttribute('height');
           }
-        } else if (node.querySelector("img")) {
-          node.style.setProperty("margin", "auto");
-          node.style.setProperty(
-            "width",
-            isMobile ? "83.333333%" : "66.66667%"
-          );
-          node.style.setProperty("padding-left", "0.875rem");
-          node.style.setProperty("padding-right", "0.875rem");
-          [].slice.call(node.querySelectorAll("img")).forEach(img => {
-            img.removeAttribute("height");
+        } else if (node.querySelector('img')) {
+          node.style.setProperty('margin', 'auto');
+          node.style.setProperty('width', isMobile ? '83.333333%' : '66.66667%');
+          node.style.setProperty('padding-left', '0.875rem');
+          node.style.setProperty('padding-right', '0.875rem');
+          [].slice.call(node.querySelectorAll('img')).forEach(img => {
+            img.removeAttribute('height');
           });
         }
 
@@ -127,7 +114,7 @@ export default props => {
       });
     }
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
 
     // On unmount
     return () => {
@@ -139,29 +126,23 @@ export default props => {
           base.current.removeChild(node);
         }
       });
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 
   return (
     <div
       className={`${styles.base} ${styles.light} ${
-        props.config.scrollout
-          ? `${styles.scrollout} custom-scrollout-outer`
-          : styles.right
-      } ${props.config.scrollouttop ? styles.scrolloutTop : ""} ${
-        props.config.scrolloutbottom ? styles.scrolloutBottom : ""
+        props.data.scrollout ? `${styles.scrollout} custom-scrollout-outer` : styles.right
+      } ${props.data.scrollouttop ? styles.scrolloutTop : ''} ${
+        props.data.scrolloutbottom ? styles.scrolloutBottom : ''
       }`}
     >
       <div className={styles.inner}>
         <div
-          className={`${
-            props.config.scrollout
-              ? "custom-scrollout-panel"
-              : "custom-normal-panel"
-          } ${styles.panel} ${props.config.spacertop ? styles.spacerTop : ""} ${
-            props.config.spacerbottom ? styles.spacerBottom : ""
-          }`}
+          className={`${props.data.scrollout ? 'custom-scrollout-panel' : 'custom-normal-panel'} ${styles.panel} ${
+            props.data.spacertop ? styles.spacerTop : ''
+          } ${props.data.spacerbottom ? styles.spacerBottom : ''}`}
           ref={base}
           style={{ opacity: opacity }}
         ></div>

@@ -1,19 +1,17 @@
-import "url-search-params-polyfill";
+import './keyshapejs.js';
+import { whenOdysseyLoaded } from '@abcnews/env-utils';
+import { selectMounts } from '@abcnews/mount-utils';
+import { loadScrollyteller } from '@abcnews/scrollyteller';
+import React from 'react';
+import { render } from 'react-dom';
+import App from './components/App';
 
-const params = new URLSearchParams(window.location.search);
-const proxyString = params.get("proxy");
+whenOdysseyLoaded.then(() => {
+  const scrollyData = loadScrollyteller('', 'u-full');
+  const [mountEl] = selectMounts('scrollout');
 
-// Experiment with ?proxy=https://ws204914.aus.aunty.abc.net.au:8000/index.js
-  // to run a local copy of the bundle
-  if (proxyString && process.env.NODE_ENV === "production") {
-    console.log("Found proxy. Redirecting...");
-    function loadModule(url) {
-      const scriptTag = document.createElement("script");
-      scriptTag.setAttribute("src", url);
-      document.head.appendChild(scriptTag);
-    }
-
-    loadModule(proxyString);
-  } else {
-    require("./main.js")
+  if (mountEl) {
+    mountEl.classList.add('u-full');
+    render(<App scrollyData={scrollyData} />, mountEl);
   }
+});
