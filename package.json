@@ -16,7 +16,7 @@
 		"test": "snyk test && aunty test"
 	},
 	"devDependencies": {
-		"@abcnews/aunty": "^12.2.0",
+		"@abcnews/aunty": "^13.2.2",
 		"@types/node": "^14.17.3",
 		"react-test-renderer": "^16.13.1",
 		"snyk": "^1.576.0"
